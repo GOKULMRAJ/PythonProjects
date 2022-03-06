@@ -5,7 +5,7 @@ widthImg = 640
 heightImg = 640
 
 cap = cam = cv2.VideoCapture(0, cv2.CAP_DSHOW)
-cap.set(10, 150)
+cap.set(10, 200)
 count = 0
 
 

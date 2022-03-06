@@ -9,7 +9,7 @@ color = (255, 0, 255)
 cap = cv2.VideoCapture(0)
 cap.set(3, frameWidth)
 cap.set(4, frameHeight)
-cap.set(10, 150)
+cap.set(10, 200)
 count = 0
 
 while True:
