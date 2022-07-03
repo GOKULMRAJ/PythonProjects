@@ -64,7 +64,9 @@ def draw_screen(create, algo='', ascending=None):
     pygame.display.update()
 
 
-def draw_list(create, bar_color={}, clear=False):
+def draw_list(create, bar_color=None, clear=False):
+    if bar_color is None:
+        bar_color = {}
     if clear:
         rect = (create.x, create.Top, create.width - create.Edge, create.width - create.Top)
         pygame.draw.rect(create.window, create.BG_COLOR,
@@ -79,7 +81,7 @@ def draw_list(create, bar_color={}, clear=False):
             color = bar_color[i]
         pygame.draw.rect(create.window, color, (x, y, create.bar_width, (val - create.min) * create.bar_height))
         Text = pygame.font.SysFont('cambria', 10).render(f"{val}",
-                                                         1, create.Blue)
+                                                         True, create.Blue)
         create.window.blit(Text, (x + create.bar_width / 2, y - 24))
 
     if clear:
