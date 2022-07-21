@@ -1,6 +1,6 @@
 import pygame
-from checkers.constants import RED, WHITE, BLUE, SQUARE_SIZE
-from checkers.board import Board
+from constants import RED, WHITE, BLUE, SQUARE_SIZE
+from board import Board
 
 
 class Game:
